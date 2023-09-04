@@ -6,7 +6,7 @@
 
 - [x]  beskriv hur man kan göra för att samla in datan, vilka format, vart kan man spara datan?
 
-Skulle jag själv skapa en databas från scratch om bostadsmarknaden hade jag försökt kartlägga och tabellsätta värden såsom priser, plats, efterfrågan storlek och skick till en stor tabell. Som tur är behöver jag inte det! Sidor såsom svensk mäklarstatistik (mot betalning) och booli (gratis!) hushåller och uppdaterar bostadsmarknadsdata i api-form, vilket är enkelt att hämta och ställa upp i tabeller eller liknande genom json-manipulering i allt från excel till kod.
+Skulle jag själv skapa en databas från scratch om bostadsmarknaden hade jag försökt kartlägga och tabellsätta värden såsom priser, plats, efterfrågan storlek och skick till en stor tabell. Som tur är behöver jag inte det! Sidor såsom [svensk mäklarstatistik](https://www.maklarstatistik.se/svensk-maklarstatistiks-api-aggregerad-statistik/) (mot betalning) och [booli](https://www.booli.se/p/api) (gratis) hushåller och uppdaterar bostadsmarknadsdata i api-form, vilket är enkelt att hämta och ställa upp i tabeller eller liknande genom json-manipulering i allt från excel till kod.
 
 - [x]  beskriv hur man kan visualisera datan?
 
@@ -48,7 +48,11 @@ I detta exempel skulle man kunna utveckla en app till exempelvis hemnet.se som u
 
 - [x]  vilka teknologier kan man använda i de olika stegen i maskininlärningsprocessen?
 
-Något som kan underlätta under själva maskininlärningsprocessen är att hjälpa och styra inlärningen under tiden modellen tränas. Förutom att modellen hela tiden behöver evalueras, behöver även våra parametrar justeras och *vägas om*. Alltså om vi upptäcker att *Antal rum* i exemplet ovan i själva verket inte alls verkar utvecklas till att vara lika viktigt som bostadens *Totala yta*. Antal rum är fortfarande ett värde vi räknar med, men vi skiftar vikten något så att Total yta får avgöra modellens lite mer. Riktningen på det röda strecket i bilden ovan hade kanske fortfarande haft en snarlik riktning, men hade förändrats litegrann. På så sätt och efter många justeringar får vi en mer precis modell.
+Något som kan underlätta under själva maskininlärningsprocessen är att hjälpa och styra inlärningen under tiden modellen tränas. Förutom att modellen behöver evalueras, behöver även våra "features" justeras och *vägas om*. Exempelvis om vi upptäcker att *Antal rum* i exemplet ovan i själva verket inte alls verkar utvecklas till att vara lika viktigt som bostadens *Total yta*. *Antal rum* är fortfarande ett värde vi räknar med, men vi skiftar vikten något så att *Total yta* får avgöra modellens trend lite mer.
+
+Ytterligare kan parametrar behövas att justeras lite mer på en meta-nivå. Exempelvis *inlärningshastighet* där vi undersöker hur stora förändringar modellen gör varje gång den blir matad vår inlärningsdata. Här kan vi justera balansen mellan hur exakt vår modell är, kontra hur snabbt vi anser den vara färdiglärd. Detta beroende på vad modellen ska användas till, men till det givna fallet för denna rapporten så tycker jag personligen att en mer exakt modell trumpfar en snabb.
+
+Efter modellen har fått sina parametrar justerade, och tränats och evaluerats på samma datasets flera gånger börjar själva förutspåelsen. Modellen får ny data inmatad och testas i hur exakt den faktiskt kan bli.
 
 Källor
 - https://learn.microsoft.com/en-us/training/modules/understand-regression-machine-learning/
