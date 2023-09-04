@@ -6,11 +6,11 @@
 
 - [x]  beskriv hur man kan göra för att samla in datan, vilka format, vart kan man spara datan?
 
-Skulle jag själv skapa en databas från scratch om bostadsmarknaden hade jag försökt kartlägga och tabellsätta värden så som priser, plats, efterfrågan storlek och skick till en stor tabell. Som tur är behöver jag inte det! Sidor så som svensk mäklarstatistik (mot betalning) och booli (gratis!) hushåller och uppdaterar bostadsmarknadsdata i api-form, vilket är enkelt att hämta och ställa upp i tabeller eller liknande genom json-manipulering i allt från excel till kod.
+Skulle jag själv skapa en databas från scratch om bostadsmarknaden hade jag försökt kartlägga och tabellsätta värden såsom priser, plats, efterfrågan storlek och skick till en stor tabell. Som tur är behöver jag inte det! Sidor såsom svensk mäklarstatistik (mot betalning) och booli (gratis!) hushåller och uppdaterar bostadsmarknadsdata i api-form, vilket är enkelt att hämta och ställa upp i tabeller eller liknande genom json-manipulering i allt från excel till kod.
 
 - [x]  beskriv hur man kan visualisera datan?
 
-Förutom dagens väldigt automatiserade och enkla lösningar i excel eller google sheets finns andra mer kodbaserade lösningar. Exempel på detta i Python är Pandas, Matplotlib, Seaborn eller Plottly, som ställer upp data i lättlästa grafer och tabeller.
+Förutom dagens väldigt automatiserade och enkla lösningar i excel eller google sheets finns andra mer kodbaserade lösningar. Exempel på detta i Python är Pandas, Matplotlib, Seaborn eller Plotly, som ställer upp data i lättlästa grafer och tabeller.
 
 - [x]  beskriv hur man kan göra för att bearbeta datan till rätt format?
 
@@ -33,22 +33,22 @@ Vi kan direkt se att det är dyrare och mindre "värt" att bo i stora städer, m
 
 ![exempel graf prickar](exempelgraf1.jpg)
 
-I grafen ovan kan vi se hur de fyra husen förhåller sig till varandra, och nedan kan vi trenden i form av en linje som är uträknad med linjär regression utifrån angiven data.
+I grafen ovan kan vi se hur de fyra husen förhåller sig till varandra, och nedan kan vi se trenden i form av en linje som är uträknad med linjär regression utifrån angiven data.
 
 ![exempel graf prickar](exempelgraf2.jpg)
 
 
-Detta är ett exempel på **enkel** linjär regression, och ett exempel som kanske inte hade vart så användbar för att förutspå en framtida utveckling utan flera och historiska datapunkter!
+Detta är ett exempel på **enkel** linjär regression, och ett exempel som kanske inte hade varit så användbar för att förutspå en framtida utveckling utan flera och historiska datapunkter!
 
-**Multipel** eller **polynomial** linjär regression hade kanske vart mer aktuell för vårt exempel långsiktigt. Där flera "features" kan tas in för träning av vår modell, och som kan mer följsamt följa en trend.
+**Multipel** eller **polynomial** linjär regression hade kanske varit mer aktuell för vårt exempel långsiktigt. Där flera "features" kan tas in för träning av vår modell, och som kan mer följsamt följa en trend.
 
 - [x]  beskriv hur man kan göra för att driftsätta modellen?
 
-I detta exempel skulle man kunna utveckla en app till exempelvis hemnet.se som utifrån användarens önskemål och budgeterade tidslinje kunna gissa sig till ungefär vilket sorts hus användaren har råd med, var någonstans i Sverige bostaden skulle kunna ligga samt när användaren skulle kunna ha råd med det. Eller varför inte en implementering för byggkoncerner där företag kan se vilken mark som är bäst att bygga på utefter vilka sorts bostäder människor i Sverige verkar söka efter, där storlek, område och prisområden skulle kunna får avgöra vad som byggs i framtiden.
+I detta exempel skulle man kunna utveckla en app till exempelvis hemnet.se som utifrån användarens önskemål och budgeterade tidslinje kunna gissa sig till ungefär vilket sorts hus användaren har råd med, var någonstans i Sverige bostaden skulle kunna ligga samt när användaren skulle kunna ha råd med det. Eller varför inte en implementering för byggkoncerner där företag kan se vilken mark som är bäst att bygga på utefter vilken sorts bostäder människor i Sverige verkar söka efter, där storlek, område och prisområden skulle kunna får avgöra vad som byggs i framtiden.
 
 - [x]  vilka teknologier kan man använda i de olika stegen i maskininlärningsprocessen?
 
-Något som kan underlätta under själva maskininlärningsprocessen är att hjälpa och styra inlärningen under tiden modellen tränas. Förutom att modellen hela tiden behöver evalueras, behöver även våra parameterar justeras och *vägas om*. Alltså om vi upptäcker att *Antal rum* i exemplet ovan i själva verket inte alls verkar utvecklas till att vara lika viktigt som bostadens *Totala yta*. Antal rum är fortfarande ett värde vi räknar med, men vi skiftar vikten något så att Total yta får avgöra modellens lite mer. Riktningen på det röda strecket i bilden ovan hade kanske fortfarande haft en snarlik rikning, men hade förändrats litegrann. På så sätt och efter många justeringar får vi en mer precis modell.
+Något som kan underlätta under själva maskininlärningsprocessen är att hjälpa och styra inlärningen under tiden modellen tränas. Förutom att modellen hela tiden behöver evalueras, behöver även våra parametrar justeras och *vägas om*. Alltså om vi upptäcker att *Antal rum* i exemplet ovan i själva verket inte alls verkar utvecklas till att vara lika viktigt som bostadens *Totala yta*. Antal rum är fortfarande ett värde vi räknar med, men vi skiftar vikten något så att Total yta får avgöra modellens lite mer. Riktningen på det röda strecket i bilden ovan hade kanske fortfarande haft en snarlik riktning, men hade förändrats litegrann. På så sätt och efter många justeringar får vi en mer precis modell.
 
 Källor
 - https://learn.microsoft.com/en-us/training/modules/understand-regression-machine-learning/
